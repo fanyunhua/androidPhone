@@ -1,6 +1,8 @@
 package com.example.ojbk_waber_pro;
 
-public class In_for_mation {
+import java.io.Serializable;
+
+public class In_for_mation implements Serializable {
 
     private String name;
     private String tel;
