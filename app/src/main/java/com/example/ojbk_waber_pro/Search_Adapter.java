@@ -8,7 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
+/**
+ *
+ * create by fanyuhua 2018.12.20
+ *
+ * */
 public class Search_Adapter extends ArrayAdapter<In_for_mation> {
 
     LayoutInflater layoutInflater;
