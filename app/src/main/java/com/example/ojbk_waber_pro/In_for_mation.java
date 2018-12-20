@@ -1,7 +1,11 @@
 package com.example.ojbk_waber_pro;
 
 import java.io.Serializable;
-
+/**
+ *
+ * create by fanyuhua 2018.12.20
+ *
+ * */
 public class In_for_mation implements Serializable {
 
     private String name;
