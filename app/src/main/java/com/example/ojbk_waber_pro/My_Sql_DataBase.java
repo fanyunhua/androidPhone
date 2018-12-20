@@ -5,7 +5,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
-
+/**
+ *
+ * create by fanyuhua 2018.12.20
+ *
+ * */
 public class My_Sql_DataBase extends SQLiteOpenHelper {
     String tableName = "stdinfo";
     Context context;
