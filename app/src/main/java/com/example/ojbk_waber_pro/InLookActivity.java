@@ -17,7 +17,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+/**
+ *
+ * create by fanyuhua 2018.12.20
+ *
+ * */
 public class InLookActivity extends AppCompatActivity {
     private My_Sql_DataBase dataBase;
     private In_for_mation auto;
