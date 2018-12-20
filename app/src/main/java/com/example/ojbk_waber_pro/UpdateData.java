@@ -10,7 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+/**
+ *
+ * create by fanyuhua 2018.12.20
+ *
+ * */
 public class UpdateData  extends AppCompatActivity{
     private EditText phone,tel,ads,mail;    //姓名，手机，座机，地址，邮箱
     TextView name;
