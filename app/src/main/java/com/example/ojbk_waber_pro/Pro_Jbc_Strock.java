@@ -15,7 +15,11 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ *
+ * create by fanyuhua 2018.12.20
+ *
+ * */
 public class Pro_Jbc_Strock extends AppCompatActivity {
     private My_Sql_DataBase dataBase;
     private ListView listView;
