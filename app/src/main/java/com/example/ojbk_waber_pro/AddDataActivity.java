@@ -83,7 +83,7 @@ public class AddDataActivity extends AppCompatActivity {
     }
     boolean isDataCorrect(String q ,String w,String e,String r,String t)
     {
-        if(q.replaceAll("\\s*","").length()>4)
+        if(q.length()>3)
         {
             if(w.length()>0)
             {

@@ -61,6 +61,7 @@ public class InLookActivity extends AppCompatActivity {
         ads.setText(ads_data);
         mail.setText(mail_data);
         person = new In_for_mation(name_data2, phone_data, tel_data, ads_data, mail_data);
+        db.close();
     }
 
     private void initDataBase() {
@@ -92,14 +93,15 @@ public class InLookActivity extends AppCompatActivity {
 
                 Bundle b = new Bundle();
                 //此处必须在需要传递的对象类中实现Serializable接口
-                b.putSerializable("persion", person);
+                b.putSerializable("person", person);
                 intent.putExtras(b);
                 startActivity(intent);
                 break;
             case R.id.delete:
-
+                deletePerson();
                 break;
             case R.id.call:
+                //打电话
                 if(ContextCompat.checkSelfPermission(InLookActivity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
                     ActivityCompat.requestPermissions(
                             InLookActivity.this,
@@ -113,6 +115,7 @@ public class InLookActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.sendMsg:
+                //发短信
                 if(PhoneNumberUtils.isGlobalPhoneNumber(phone_data)){
                     Intent intent1 = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"+phone_data));
                     intent1.putExtra("sms_body", "");
@@ -122,10 +125,11 @@ public class InLookActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    private void callPhone()
+    private void deletePerson()
     {
-
+        SQLiteDatabase db = dataBase.getWritableDatabase();
+        db.delete(dataBase.tableName,"name=?",new String[]{name_data2});
+        Toast.makeText(InLookActivity.this,"删除成功",Toast.LENGTH_SHORT).show();
+        finish();
     }
-
-
 }
